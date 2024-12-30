@@ -9,6 +9,7 @@
 
 .scoreColumn>div {
   text-align: center;
+  text-wrap: nowrap;
   padding: 4px;
   min-height: 20px;
 }
