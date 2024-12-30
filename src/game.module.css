@@ -1,0 +1,19 @@
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreColumn {
+  composes: column;
+}
+
+.scoreColumn>div {
+  text-align: center;
+  padding: 4px;
+  min-height: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
