@@ -1,10 +1,24 @@
 .column {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.scrollableColumns {
+  max-width: 100%;
+  overflow-x: scroll;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
 }
 
 .scoreColumn {
   composes: column;
+}
+
+.scoreLeftColumn {
+  composes: scoreColumn;
+  border-right: 1px solid lightgrey;
 }
 
 .scoreColumn>div {

@@ -53,12 +53,14 @@ function InProgress() {
 
   return <div className={styles.column}>
     <div className={styles.row}>
-      <div className={styles.scoreColumn}>
+      <div className={styles.scoreLeftColumn}>
         <div />
         {Array.from(iterate(game.players[0].score.length, (i) => <div key={i}>Round #{i + 1}</div>))}
         <div>Total</div>
       </div>
-      {game.players.map(player => <PlayerStat key={player.name} player={player} setSelected={setSelected} />)}
+      <div className={styles.scrollableColumns}>
+        {game.players.map(player => <PlayerStat key={player.name} player={player} setSelected={setSelected} />)}
+      </div>
     </div>
     <Button onClick={addRound}>Add round</Button>
   </div>;
